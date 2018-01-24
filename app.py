@@ -67,10 +67,6 @@ def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
-    //tempUnit = parameters.get("V2Temperature");
-    //if(tempUnit!=undefined && tempUnit!=null && tempUnit.toUpperCase().startsWith('C'){
-       tempUnit='c';
-   // }
     if city is None:
         return None
 
