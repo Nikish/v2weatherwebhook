@@ -69,7 +69,7 @@ def makeYqlQuery(req):
     city = parameters.get("geo-city")
     tempUnit = parameters.get("V2Temperature")
     
-    if tempUnit is None:
+    if tempUnit is None or tempUnit.upper().startswith('C'):
        tempUnit = 'F'
     else:
        tempUnit = 'C'
